@@ -1,5 +1,5 @@
 [project]
-name = "vitality-ai-incident-commander"
+name = "incident-commander"
 version = "0.1.0"
 description = "Stitch-designed, evidence-grounded incident command demo"
 requires-python = ">=3.13"

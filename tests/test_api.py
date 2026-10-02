@@ -2,6 +2,7 @@ import os
 import tempfile
 import unittest
 import uuid
+from pathlib import Path
 
 
 TEST_DB = os.path.join(tempfile.gettempdir(), f"vitality-tests-{uuid.uuid4().hex}.sqlite3")
@@ -125,10 +126,19 @@ class IncidentApiTests(unittest.TestCase):
                 self.assertEqual(response.status_code, 200)
                 self.assertIn("/assets/vitality-dachshund.png", response.text)
                 self.assertIn('/assets/app.js', response.text)
+                rendered_copy = response.text.lower().replace(
+                    "/assets/vitality-dachshund.png", ""
+                )
+                self.assertNotIn("vitality", rendered_copy)
 
         settings = self.client.get("/settings")
         self.assertEqual(settings.status_code, 200)
         self.assertIn('data-app-view="settings"', settings.text)
+        app_script = (
+            Path(__file__).resolve().parent.parent / "static" / "assets" / "app.js"
+        ).read_text(encoding="utf-8")
+        self.assertNotIn("Vitality", app_script)
+        self.assertNotIn("VITALITY", app_script)
 
     def test_exported_demo_copy_does_not_claim_live_fix_or_monitoring(self):
         incidents = self.client.get("/incidents").text

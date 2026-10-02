@@ -126,7 +126,7 @@
         ? `${summary.active_incidents} active incident records. Seeded records remain synthetic; authenticated webhook events are stored separately.`
         : `${summary.active_incidents} active sample incident(s). Synthetic data only; this app is not monitoring a live website.`,
     );
-    addImage(banner, "vitality-demo-dog", "Vitality dachshund mascot");
+    addImage(banner, "vitality-demo-dog", "Dachshund mascot");
     banner.append(badge, text);
     main.prepend(banner);
   }
@@ -353,7 +353,7 @@
     const page = element("div", "vitality-settings-page");
     const heading = element("header", "vitality-settings-heading");
     heading.append(
-      element("span", "vitality-runtime-eyebrow", "VITALITY AI · SETTINGS"),
+      element("span", "vitality-runtime-eyebrow", "INCIDENT COMMAND · SETTINGS"),
       element("h1", "", "Configuration status"),
       element("p", "", "Demo mode is available now. Credentials are never shown in this screen."),
     );
@@ -484,17 +484,17 @@
   function appendChatMessage(role, text, mode) {
     const thread = byId("chatThread");
     if (!thread) {
-      showDialog(role === "assistant" ? "Vitality Incident Assistant" : "Your question", text);
+      showDialog(role === "assistant" ? "Incident Assistant" : "Your question", text);
       return;
     }
     const message = element(
       "article",
       role === "assistant" ? "vitality-chat-message is-assistant" : "vitality-chat-message is-user",
     );
-    if (role === "assistant") addImage(message, "vitality-chat-dog", "Vitality dachshund assistant");
+    if (role === "assistant") addImage(message, "vitality-chat-dog", "Dachshund assistant");
     const bubble = element("div", "vitality-chat-bubble");
     bubble.append(
-      element("strong", "", role === "assistant" ? "Vitality Dog Detective" : "You"),
+      element("strong", "", role === "assistant" ? "Incident Assistant" : "You"),
       element("p", "", text),
     );
     if (mode) bubble.append(element("small", "", mode.replaceAll("_", " ")));
@@ -514,7 +514,7 @@
     appendChatMessage("user", question);
     const loading = byId("vitality-chat-loading");
     if (!loading && byId("chatThread")) {
-      const item = element("p", "vitality-chat-loading", "Vitality is checking the saved incident evidence…");
+      const item = element("p", "vitality-chat-loading", "Checking the saved incident evidence…");
       item.id = "vitality-chat-loading";
       byId("chatThread").append(item);
     }

@@ -1,4 +1,4 @@
-# Vitality AI Incident Commander
+# Incident Commander
 
 ## Run
 

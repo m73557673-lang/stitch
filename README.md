@@ -1,8 +1,8 @@
-# Vitality AI Incident Commander
+# Incident Commander
 
 A working prototype built from the supplied Stitch exports. The application keeps
-the original Vitality pink-and-white screens and uses the bundled dachshund
-illustration in the brand and assistant avatars.
+the original pink-and-white screens and uses the bundled dachshund illustration
+in assistant avatars.
 
 ## Run on Replit
 

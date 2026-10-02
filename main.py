@@ -30,7 +30,7 @@ logging.basicConfig(
     level=os.getenv("LOG_LEVEL", "INFO").upper(),
     format="%(asctime)s %(levelname)s %(name)s %(message)s",
 )
-logger = logging.getLogger("vitality_incident_commander")
+logger = logging.getLogger("incident_commander")
 
 AI_ROLES = {
     "investigation": "AI_AGENT_1",
@@ -501,7 +501,7 @@ def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Vitality AI Incident Commander",
+    title="Incident Commander",
     description="Evidence-grounded incident demo with approval-gated simulated recovery.",
     version="0.1.0",
 )
@@ -1191,6 +1191,26 @@ def render_screen(view: str, data_view: str | None = None) -> HTMLResponse:
         ("Download PDF Report", "Download JSON Report"),
     ):
         html = html.replace(original, replacement)
+    for original, replacement in (
+        ("Vitality AI Incident Commander", "Incident Commander"),
+        ("Vitality AI Detective", "Incident Assistant"),
+        ("Vitality AI Assistant", "AI Assistant"),
+        ("Vitality AI Diagnostic Scan", "AI Diagnostic Scan"),
+        ("Vitality AI", "AI"),
+        ("Vitality Detective Sniffer", "Incident Detective"),
+        ("Vitality Detective", "Incident Assistant"),
+        ("Vitality Guard", "Safety Guard"),
+        ("Vitality Dog", "Dachshund"),
+        ("Vitality-Hound-XL", "Demo-Hound-XL"),
+        ("api.vitality.health", "api.example.com"),
+    ):
+        html = re.sub(re.escape(original), replacement, html, flags=re.IGNORECASE)
+    html = re.sub(
+        r"\bVitality\b(?!-dachshund\.png)",
+        "",
+        html,
+        flags=re.IGNORECASE,
+    )
     html = re.sub(
         r"Full recovery was achieved at\s*<strong[^>]*>14:27 UTC</strong>\s*with zero data loss\.",
         "Synthetic example only; no live recovery or transaction data was observed.",
