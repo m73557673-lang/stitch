@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pythonlibs/
+.venv/
+venv/
+
+# Local environment and runtime data
+.env
+.env.*
+!.env.example
+data/*.sqlite3
+data/*.sqlite3-*
+
+# Editor / operating system
+.DS_Store
+.idea/
+.vscode/

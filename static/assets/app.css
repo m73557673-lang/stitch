@@ -1,0 +1,519 @@
+.vitality-demo-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 18px;
+  padding: 10px 14px;
+  border: 1px solid #f3c9d5;
+  border-radius: 14px;
+  background: #fff0f4;
+  color: #713d4c;
+  font: 600 12px/1.5 Inter, sans-serif;
+}
+
+.vitality-demo-badge {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: #ed0056;
+  color: #fff;
+  font: 700 10px/1.2 Inter, sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.vitality-demo-dog {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+}
+
+.vitality-runtime-panel {
+  margin: 0 0 18px;
+}
+
+.vitality-runtime-card {
+  padding: 18px;
+  border: 1px solid #f0dfe3;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(99, 25, 52, 0.055);
+  color: #30272b;
+  font: 400 13px/1.55 Inter, sans-serif;
+}
+
+.vitality-runtime-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.vitality-runtime-card-heading h2 {
+  margin: 0;
+  font: 700 17px/1.3 "Plus Jakarta Sans", Inter, sans-serif;
+}
+
+.vitality-runtime-eyebrow {
+  flex: 0 0 auto;
+  color: #9a5269;
+  font: 700 10px/1.3 Inter, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.vitality-runtime-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.vitality-runtime-stat {
+  display: flex;
+  min-height: 66px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fff4f7;
+}
+
+.vitality-runtime-stat strong {
+  color: #b90041;
+  font: 700 20px/1.2 "Plus Jakarta Sans", Inter, sans-serif;
+}
+
+.vitality-runtime-stat span,
+.vitality-runtime-row-meta,
+.vitality-runtime-evidence small {
+  color: #77676c;
+  font-size: 11px;
+}
+
+.vitality-runtime-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.vitality-runtime-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #f1e7e9;
+  border-radius: 12px;
+  background: #fff;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.vitality-runtime-row:hover {
+  border-color: #eda8bd;
+  background: #fff9fb;
+}
+
+.vitality-runtime-row-copy {
+  display: grid;
+  gap: 3px;
+}
+
+.vitality-runtime-row-title {
+  font-weight: 700;
+}
+
+.vitality-runtime-row-meta {
+  text-transform: capitalize;
+}
+
+.vitality-runtime-state {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: #fff2dd;
+  color: #8d5b00;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.vitality-runtime-state.is-alert {
+  background: #ffe5ee;
+  color: #b90041;
+}
+
+.vitality-runtime-state.is-healthy {
+  background: #e9f8f0;
+  color: #18764b;
+}
+
+.vitality-runtime-evidence {
+  padding: 11px 12px;
+  border-radius: 12px;
+  background: #fff7f9;
+}
+
+.vitality-runtime-evidence p,
+.vitality-runtime-intro {
+  margin: 6px 0;
+  color: #5c4e52;
+}
+
+.vitality-runtime-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.vitality-runtime-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #ed0056;
+  color: #fff;
+  font: 700 12px/1.35 Inter, sans-serif;
+  cursor: pointer;
+}
+
+.vitality-runtime-primary:hover {
+  background: #bd0043;
+}
+
+.vitality-runtime-empty {
+  color: #77676c;
+}
+
+.vitality-runtime-toast {
+  position: fixed;
+  z-index: 1000;
+  right: 20px;
+  bottom: 20px;
+  max-width: min(440px, calc(100vw - 32px));
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: #30272b;
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(30, 12, 19, 0.2);
+  font: 600 13px/1.45 Inter, sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.vitality-runtime-toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vitality-runtime-toast.is-error {
+  background: #9d123e;
+}
+
+.vitality-runtime-dialog {
+  width: min(680px, calc(100vw - 30px));
+  max-height: min(80vh, 760px);
+  padding: 22px;
+  border: 1px solid #f0dfe3;
+  border-radius: 18px;
+  background: #fff;
+  color: #30272b;
+  box-shadow: 0 24px 80px rgba(45, 18, 30, 0.24);
+}
+
+.vitality-runtime-dialog::backdrop {
+  background: rgba(36, 17, 25, 0.38);
+  backdrop-filter: blur(3px);
+}
+
+.vitality-runtime-dialog h2 {
+  margin: 0 0 14px;
+  font: 700 20px/1.35 "Plus Jakarta Sans", Inter, sans-serif;
+}
+
+.vitality-dialog-body {
+  max-height: 60vh;
+  overflow: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #51464a;
+  font: 400 13px/1.65 Inter, sans-serif;
+}
+
+.vitality-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.vitality-dialog-close {
+  border: 0;
+  border-radius: 999px;
+  padding: 9px 18px;
+  background: #ed0056;
+  color: #fff;
+  font: 700 12px Inter, sans-serif;
+  cursor: pointer;
+}
+
+.vitality-chat-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.vitality-chat-message.is-user {
+  justify-content: flex-end;
+}
+
+.vitality-chat-bubble {
+  max-width: min(620px, 92%);
+  padding: 12px 15px;
+  border-radius: 16px;
+  background: #fff3f7;
+  color: #372d31;
+}
+
+.vitality-chat-message.is-user .vitality-chat-bubble {
+  background: #ed0056;
+  color: #fff;
+}
+
+.vitality-chat-bubble p {
+  margin: 5px 0 0;
+  white-space: pre-wrap;
+}
+
+.vitality-chat-bubble small {
+  display: block;
+  margin-top: 8px;
+  opacity: 0.72;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.vitality-chat-dog {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 12px;
+  background: #fff;
+  object-fit: contain;
+}
+
+.vitality-chat-loading {
+  margin: 10px 0;
+  color: #8b6472;
+  font: 600 12px Inter, sans-serif;
+}
+
+.vitality-settings-page {
+  display: grid;
+  width: min(100%, 960px);
+  gap: 18px;
+  margin: 20px auto;
+  padding: 0 18px 40px;
+}
+
+.vitality-settings-heading h1 {
+  margin: 4px 0;
+  color: #241e21;
+  font: 700 30px/1.2 "Plus Jakarta Sans", Inter, sans-serif;
+}
+
+.vitality-settings-heading p,
+.vitality-settings-note {
+  color: #66565c;
+  font: 400 13px/1.6 Inter, sans-serif;
+}
+
+.vitality-settings-row {
+  display: grid;
+  grid-template-columns: minmax(100px, 0.7fr) auto minmax(220px, 2fr);
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid #f2e8eb;
+  text-transform: capitalize;
+}
+
+.vitality-settings-row code {
+  color: #7d5966;
+  font-size: 10px;
+  overflow-wrap: anywhere;
+  text-transform: none;
+}
+
+.vitality-settings-row > span:not(.vitality-runtime-state) {
+  color: #77676c;
+  font-size: 12px;
+}
+
+.vitality-settings-note {
+  border-left: 3px solid #ed0056;
+  padding: 10px 14px;
+  background: #fff3f7;
+}
+
+.vitality-mobile-menu,
+.vitality-mobile-backdrop {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .vitality-demo-banner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 10px 0 14px;
+    font-size: 11px;
+  }
+
+  .vitality-runtime-card {
+    padding: 14px;
+  }
+
+  .vitality-runtime-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .vitality-runtime-row {
+    align-items: flex-start;
+  }
+
+  .vitality-runtime-actions {
+    display: grid;
+  }
+
+  .vitality-settings-row {
+    grid-template-columns: 1fr auto;
+  }
+
+  .vitality-settings-row code {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body > .pl-72,
+  body > .pl-64 {
+    width: 100%;
+    padding-left: 0 !important;
+  }
+
+  body > .pl-72 > header,
+  body > .pl-64 > header {
+    right: 0 !important;
+    left: 0 !important;
+    height: 60px !important;
+    gap: 6px;
+    padding-right: 10px !important;
+    padding-left: 56px !important;
+  }
+
+  body > .pl-72 > header > div:first-child,
+  body > .pl-64 > header > div:first-child {
+    min-width: 0;
+    margin-left: 0 !important;
+    flex: 1 1 auto;
+  }
+
+  body > .pl-72 > header > div:last-child,
+  body > .pl-64 > header > div:last-child {
+    flex: 0 0 auto;
+    gap: 3px !important;
+  }
+
+  body > .pl-72 > header input,
+  body > .pl-64 > header input {
+    min-width: 0;
+    font-size: 11px !important;
+  }
+
+  body > .pl-72 > header .hidden,
+  body > .pl-64 > header .hidden {
+    display: none !important;
+  }
+
+  body aside.fixed {
+    z-index: 80 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: min(288px, 86vw) !important;
+    transform: translateX(-105%);
+    transition: transform 180ms ease;
+    box-shadow: 12px 0 32px rgba(40, 16, 25, 0.14);
+  }
+
+  body.vitality-nav-open aside.fixed {
+    transform: translateX(0);
+  }
+
+  body > .pl-72 > main,
+  body > .pl-64 > main {
+    width: 100% !important;
+    padding-right: 13px !important;
+    padding-left: 13px !important;
+  }
+
+  .vitality-demo-banner {
+    margin-top: 10px;
+  }
+
+  .vitality-mobile-menu {
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f0dfe3;
+    border-radius: 12px;
+    background: #fff;
+    color: #b90041;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(99, 25, 52, 0.08);
+  }
+
+  .vitality-mobile-backdrop {
+    position: fixed;
+    z-index: 79;
+    inset: 0;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: rgba(36, 17, 25, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+  }
+
+  body.vitality-nav-open .vitality-mobile-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

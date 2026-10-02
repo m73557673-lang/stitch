@@ -1,0 +1,235 @@
+PROJECT: Autonomous AI-Powered Incident Commander
+
+ROLE:
+Act as a senior full-stack developer, AI engineer, Site Reliability Engineer (SRE), and DevOps architect. Build a working, secure AI incident-management platform based on my existing Stitch AI frontend design.
+
+IMPORTANT CONTEXT:
+I have already designed the frontend using Stitch AI. Do not redesign the application from scratch. First inspect the existing files, components, pages, assets, routing, styling, and dependencies. Preserve the current design and connect it to a real backend.
+
+My project is intended to monitor a real website or application, detect failures, investigate their root causes using AI agents, recommend safe fixes, and validate recovery. It must also support a chatbot that explains incidents in simple English.
+
+PRIMARY OBJECTIVES:
+
+1. Integrate my existing Stitch UI into a working full-stack application.
+2. Connect a frontend to a Python FastAPI backend.
+3. Detect application failures through real monitoring signals and incoming alerts.
+4. Use AI agents to investigate incidents and identify likely root causes.
+5. Provide a chatbot that answers questions using actual incident data.
+6. Recommend remediation and require human approval for consequential actions.
+7. Validate recovery and generate incident reports.
+8. Support a safe demo mode when real monitoring integrations are not configured.
+
+TECHNOLOGY:
+
+* Frontend: preserve my existing Stitch-generated framework and styling.
+* Backend: Python FastAPI.
+* Database: SQLite for the prototype, with a clean path to PostgreSQL.
+* AI: configurable LLM API integrations using environment variables.
+* Monitoring: support an alert webhook and a configurable health-check monitor; keep Prometheus and Alertmanager integration modular.
+* Logging: structured application logs.
+* Testing: backend API tests and frontend integration checks.
+
+STEP 1 — INSPECT BEFORE CHANGING:
+Inspect all existing project files first.
+Identify the frontend framework, entry point, routes, styling system, installed packages, and available components.
+Identify whether a backend already exists.
+Do not overwrite existing working code or replace my Stitch design with a generic dashboard.
+Write a short implementation plan and then implement it incrementally.
+
+STEP 2 — PRESERVE MY STITCH DESIGN:
+Keep the existing light theme, page layouts, colors, cards, charts, sidebar, typography, and responsive behavior.
+Connect the existing screens to real backend API endpoints.
+If a required page is missing, add it using the same design system.
+Do not create duplicate dashboards or duplicate navigation.
+Use loading states, empty states, error messages, and success notifications.
+
+STEP 3 — INCIDENT DETECTION:
+Build an incident-detection module that supports:
+
+* Incoming monitoring alerts through a secured FastAPI webhook.
+* Configurable HTTP health checks for an explicitly authorized target URL.
+* Error-rate, response-time, availability, and service-health signals when those metrics are available.
+* Alert timestamps, source, service name, severity, affected component, and relevant measurements.
+* Configurable thresholds and sustained-failure windows.
+* Alert deduplication, incident grouping, and recovery notifications.
+* Incident creation and lifecycle tracking in the database.
+
+Never claim that a website has failed based only on unavailable or fabricated data.
+Distinguish between a confirmed health-check failure, an alert received from a monitoring provider, and an AI-generated hypothesis.
+Do not expose internal monitoring credentials or sensitive production logs.
+
+For an initial prototype, support clearly labeled synthetic incidents and simulated metrics. Keep simulated and real monitoring data separate.
+
+STEP 4 — BACKEND API:
+Implement and document endpoints such as:
+
+* GET /api/health
+* GET /api/incidents
+* GET /api/incidents/{incident_id}
+* POST /api/alerts/webhook
+* POST /api/incidents/{incident_id}/investigate
+* GET /api/incidents/{incident_id}/evidence
+* GET /api/incidents/{incident_id}/recommendations
+* POST /api/incidents/{incident_id}/approve
+* POST /api/incidents/{incident_id}/simulate-fix
+* GET /api/incidents/{incident_id}/metrics
+* POST /api/incidents/{incident_id}/postmortem
+* POST /api/chat
+* GET /api/services
+* GET /api/dashboard/summary
+
+Use request validation, appropriate HTTP status codes, error handling, logging, and authentication or webhook signature verification where appropriate. Document request and response formats.
+
+STEP 5 — THREE AI API KEYS:
+I have three AI API keys available for my AI agent and chatbot functionality.
+
+Do not ask me to paste secret values into source code. Use Replit Secrets or environment variables.
+
+Create a configurable AI service layer with these logical roles:
+
+* AI_KEY_1: investigation agent that summarizes an incident and analyzes available logs and metrics.
+* AI_KEY_2: root-cause and remediation agent that compares evidence, retrieves relevant knowledge, and suggests possible fixes.
+* AI_KEY_3: chatbot agent that answers user questions using incident records, investigation results, and supporting evidence.
+
+Use these placeholder environment variable names:
+AI_AGENT_1_API_KEY
+AI_AGENT_2_API_KEY
+CHATBOT_API_KEY
+
+Also configure the required provider name, model name, and API base URL where applicable. Do not assume that all three keys belong to the same provider or use the same API format.
+
+Build separate provider adapters if necessary. Reuse a provider client only when the provider and API configuration are compatible.
+
+If a key or model is not configured, show a clear configuration error and allow the rest of the application to operate where possible.
+
+Never hardcode API keys, print secrets to logs, send them to the browser, or commit them to Git.
+
+STEP 6 — AI INVESTIGATION WORKFLOW:
+When an incident is received:
+
+1. Create or update the incident record.
+2. Collect available logs, metrics, health-check results, deployment information, and timestamps.
+3. Retrieve relevant runbooks and historical incidents when available.
+4. Ask the investigation agent to summarize the evidence.
+5. Ask the root-cause agent to produce possible causes and supporting evidence.
+6. Calculate or clearly label confidence estimates without presenting unsupported precision.
+7. Generate a remediation recommendation and risk assessment.
+8. Store the investigation, evidence references, recommendations, and execution status.
+9. Display progress in the existing dashboard.
+10. Generate a structured post-incident report when appropriate.
+
+Use structured JSON responses where supported, validate model outputs, handle timeouts and rate limits, and avoid duplicate concurrent investigations.
+
+AI conclusions must be grounded in available evidence. Clearly identify missing data and uncertainty. Never treat an AI hypothesis as a confirmed root cause without sufficient validation.
+
+STEP 7 — CHATBOT:
+Integrate a working chatbot into the existing Stitch design.
+
+The chatbot must:
+
+* Answer questions about active incidents and service health.
+* Explain technical errors in beginner-friendly English.
+* Explain why the AI suspects a particular root cause.
+* Reference available logs, metrics, deployment changes, and runbooks.
+* Explain recommended fixes, risks, and approval requirements.
+* Answer follow-up questions using the selected incident context.
+* Show loading states and useful error messages.
+* Handle missing evidence honestly.
+* Keep the conversation scoped to the user's authorized data.
+* Never invent incident records or claim an action was executed when it was not.
+* Never execute production remediation directly from a chat message.
+
+Use the third AI integration for chatbot responses. Retrieve relevant incident data from the backend and supply only the necessary context to the model.
+
+STEP 8 — SAFE REMEDIATION:
+Default to read-only investigation.
+
+Implement a workflow with separate states:
+Recommended → Awaiting Approval → Approved → Executing or Simulating → Validating → Resolved or Failed.
+
+For the prototype, provide a simulated fix that updates synthetic metrics and records the outcome.
+
+For a real environment, do not execute arbitrary shell commands, database changes, deployments, or configuration changes. Implement only explicitly allowlisted actions with appropriate authentication, authorization, audit logging, and human approval. Never expose a production execution endpoint without proper access controls.
+
+STEP 9 — DASHBOARD INTEGRATION:
+Connect my existing Stitch screens to the backend.
+
+The dashboard should display:
+
+* Active incidents and severity.
+* Healthy, warning, and critical services.
+* Recent incident activity.
+* Error rate and response-time charts.
+* AI investigation progress.
+* Evidence and likely root causes.
+* Recommended actions and approval status.
+* Recovery validation results.
+* Incident history and generated reports.
+* The integrated Incident Assistant chatbot.
+
+Use actual backend data when available and visibly labeled demo data in simulation mode. Refresh data appropriately and avoid unnecessarily frequent requests.
+
+STEP 10 — DATABASE:
+Create appropriate tables or models for:
+
+* Incidents
+* Services
+* Alerts
+* Log events
+* Metrics
+* Deployments
+* Knowledge documents
+* Evidence
+* AI investigation results
+* Recommendations
+* Remediation actions
+* Chat sessions and messages
+* Postmortem reports
+* Audit events
+
+Use database migrations or a reliable initialization method, timestamps, unique identifiers, and appropriate relationships.
+
+STEP 11 — SECURITY AND RELIABILITY:
+
+* Store secrets in Replit Secrets.
+* Keep all AI calls on the backend.
+* Validate and sanitize incoming requests.
+* Protect monitoring webhooks against unauthorized requests and replay where appropriate.
+* Restrict target URLs and prevent server-side request forgery in health-check functionality.
+* Add request timeouts, retry limits, rate limiting, and useful error handling.
+* Avoid storing unnecessary personal or confidential data.
+* Enforce authorization for incident access and approval actions.
+* Record approvals and remediation outcomes in an audit trail.
+* Keep real and simulated environments clearly separated.
+
+STEP 12 — TESTING AND DELIVERY:
+Implement the application in small, verifiable stages.
+
+First get the backend and database running. Then connect the existing frontend. Next implement alert ingestion, AI investigation, the chatbot, simulated remediation, and reporting.
+
+Test:
+
+* Backend health and database initialization.
+* Incident creation and retrieval.
+* Valid and invalid monitoring alerts.
+* Duplicate alert handling.
+* AI provider configuration and API errors.
+* Evidence-grounded investigation.
+* Chatbot responses and missing-data handling.
+* Approval restrictions.
+* Simulated recovery and report generation.
+* Frontend navigation and API integration.
+
+Provide:
+
+* A working application.
+* An .env.example containing placeholders only.
+* Replit Secrets configuration instructions.
+* A README with setup and run instructions.
+* API documentation.
+* A clear explanation of how to connect an authorized real website or monitoring provider.
+* A demo mode for presenting the project without production credentials.
+
+Do not stop after generating a plan or static UI. Implement the features, run available tests, fix errors, and clearly report which features are working, which require credentials, and which still require external integrations.
+
+Start by inspecting my existing Stitch-based project and identifying the smallest safe set of changes needed to make it functional.

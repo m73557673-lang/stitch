@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","surface":"#fff8f8","on-secondary-container":"#696365","secondary-fixed-dim":"#cdc4c7","secondary-container":"#e9e0e3","background":"#fff8f8","on-surface":"#1f1a1c","on-error-container":"#93000a","tertiary-fixed":"#78fbb6","outline":"#916e71","on-primary-container":"#fffbff","surface-variant":"#eae0e2","on-primary":"#ffffff","on-secondary":"#ffffff","surface-container-low":"#fbf1f3","on-background":"#1f1a1c","surface-bright":"#fff8f8","inverse-surface":"#342f31","surface-container-highest":"#eae0e2","surface-tint":"#bd0043","on-error":"#ffffff","primary-fixed-dim":"#ffb2ba","inverse-primary":"#ffb2ba","primary":"#b90041","primary-container":"#e70054","error-container":"#ffdad6","on-tertiary-fixed":"#002111","surface-container-lowest":"#ffffff","secondary-fixed":"#e9e0e3","tertiary-fixed-dim":"#59de9b","surface-container":"#f5ebed","primary-fixed":"#ffd9dc","on-tertiary-fixed-variant":"#005232","outline-variant":"#e6bcc0","on-surface-variant":"#5d3f42","on-tertiary-container":"#f6fff5","on-secondary-fixed":"#1f1a1c","error":"#ba1a1a","secondary":"#635d5f","inverse-on-surface":"#f8eef0","on-primary-fixed":"#400011","tertiary":"#006a42","on-secondary-fixed-variant":"#4b4548","tertiary-container":"#008654","surface-dim":"#e1d8da","surface-container-high":"#efe6e8","on-primary-fixed-variant":"#910031"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1.25rem","space-lg":"1.5rem","gutter":"1.5rem","margin":"3rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["28px",{"lineHeight":"36px","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"18px","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","fontWeight":"700"}],"display-mobile":["36px",{"lineHeight":"44px","fontWeight":"800"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-lg":["16px",{"lineHeight":"20px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display":["56px",{"lineHeight":"64px","fontWeight":"800"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-md py-space-md"><div class="flex items-center gap-space-sm px-space-xs pb-space-lg"><img alt="Brand logo. - Primary color: #ed0056
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xwf3VxhVFEBkSd_xZQym18GZmiiV4vRaGWTge3gT6NMykqjMbUkoq9gENHiqBCcXLspKRJ_qYZ9HxWd104aJBEkJolXeWZKUMFqczCwPIofD8Xw8P6yDHyJjBuAGEyDK3adOhyhQDUOH8L-3klSbCs4OHN6GBJHyyt4SxSYlz4az8eLTYz1cN_DyB5fskoiGbscvsvfe4jxan3Bnr69Dq8GVE61BB5sOYfh4MbcmsldUzdkey01MHfyE8"/><div class="flex flex-col"><span class="font-label-lg text-label-lg text-primary tracking-tight">Vitality AI</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Incident Commander</span></div></div><div class="pb-space-xs"><span class="px-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary">Command Center</span></div><nav class="flex flex-col gap-1 pb-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl shadow-[0_4px_20px_-2px_rgba(237,0,86,0.12)]"><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="active-incidents" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-md text-label-md">Active Incidents</span></div><span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">3 Critical</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-investigation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-label-md text-label-md">AI Investigation</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="evidence-logs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">Evidence &amp; Logs</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="fix-recommendations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">auto_fix_high</span><span class="font-label-md text-label-md">Fix Recommendations</span></div><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">5 Pending</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="incident-reports" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Incident Reports</span></div></a></nav><div class="pb-space-xs"><span class="px-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary">Assistance</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl shadow-[0_4px_20px_-2px_rgba(237,0,86,0.12)]"><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 transition-all bg-primary-container text-on-primary-container font-bold rounded-xl shadow-[0_4px_20px_-2px_rgba(237,0,86,0.12)]" data-path="ai-chatbot" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-label-md text-label-md">AI Chatbot</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="safe-simulation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">science</span><span class="font-label-md text-label-md">Safe Simulation</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-md text-label-md">Settings</span></div></a></nav></div><div class="p-space-md"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)]"><img alt="Vitality Dog mascot badge" class="w-10 h-10 rounded-lg object-contain bg-surface-container-low p-1" src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-bold">Vitality Guard</span><span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Active</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-10 pr-space-md py-2 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm focus:outline-none shadow-[0_2px_6px_-1px_rgba(26,22,24,0.04)]" placeholder="Search incidents, runbooks, logs, or services..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-sm"><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-tertiary"></span>Vitality Core Systems Monitored</span><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>Live Safe Simulation Mode</span></div><div class="flex items-center gap-space-sm pl-space-sm"><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="flex items-center gap-2 pl-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XYBFtSpP-yrBd7VVSILKUgzfbq9YuvJyfi9BrsGz0bQZF2Xxi1q0ojdzCodqAlj0wspxJT73tx4un2R57MqA3p-aoAEg2U04BnXY-knoFb3TX2RY_aj86lNMR6VTaHtcACttPKvH9pjC0dmjGhedslXVgg6JOHcxPV0OaCO29kqZI7qlYXxDybUeUkMeUsQFhiCBK0D8PPUDJc4lpuCGcgCUQiatKYAKovQmwB5Y9uwxdIXUaaWqqmaQ"/><div class="hidden md:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface leading-tight">Dr. Sarah Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant text-[11px] leading-tight">Principal SRE</span></div></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg"><div class="flex flex-col w-full pb-10">
+<!-- Top Context Header Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] p-space-md mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center p-1.5 flex-shrink-0">
+<img alt="Vitality Dachshund Detective Mascot" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Vitality Incident Assistant</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm inline-flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+              Autonomous Copilot Online
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+              Supervised by Vitality Dog
+            </span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm truncate pt-0.5">
+<span class="font-label-sm text-label-sm text-primary font-bold">Ref: INC-8492</span>
+<span>•</span>
+<span class="truncate">Checkout Slowdown &amp; Payment Gateway Timeout Anomaly</span>
+<span>•</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">verified_user</span>Read-Only Guard Active</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap self-end lg:self-center">
+<button class="px-3.5 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Export Transcript
+        </button>
+<button class="px-3.5 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+          Share with Team
+        </button>
+<button class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md flex items-center gap-1.5 shadow-[0_4px_16px_-2px_rgba(237,0,86,0.25)] transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          New Chat
+        </button>
+</div>
+</div>
+</div>
+<!-- 3-Column Conversational Command Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT SIDEBAR: Chat History & Detective Status (Col 1-3) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.05)]">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">Investigation History</span>
+<span class="font-label-sm text-label-sm text-secondary">4 Threads</span>
+</div>
+<div class="relative w-full pb-space-sm">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm focus:outline-none focus:bg-surface-container" placeholder="Search chats or tags..." type="text"/>
+</div>
+<!-- Chat thread list -->
+<div class="flex flex-col gap-1.5 pt-1">
+<!-- Active Thread -->
+<div class="p-space-sm rounded-xl bg-primary-fixed/40 flex flex-col gap-1 cursor-pointer transition-all shadow-[0_2px_8px_-1px_rgba(237,0,86,0.08)]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">Active Investigation</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold leading-tight">INC-8492: Root cause &amp; fix review</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">SRE Copilot &amp; Dog Detective engaged</span>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm">Checkout API</span>
+<span class="text-secondary font-label-sm text-label-sm">2m ago</span>
+</div>
+</div>
+<!-- Past Thread 1 -->
+<div class="p-space-sm rounded-xl hover:bg-surface-container-low flex flex-col gap-1 cursor-pointer transition-all text-on-surface-variant hover:text-on-surface">
+<p class="font-label-md text-label-md font-bold leading-tight">DB Connection Pool Queries</p>
+<span class="font-body-sm text-body-sm text-secondary truncate">PostgreSQL pool metrics deep dive</span>
+<span class="text-secondary font-label-sm text-label-sm">Today, 11:20 AM</span>
+</div>
+<!-- Past Thread 2 -->
+<div class="p-space-sm rounded-xl hover:bg-surface-container-low flex flex-col gap-1 cursor-pointer transition-all text-on-surface-variant hover:text-on-surface">
+<p class="font-label-md text-label-md font-bold leading-tight">System Health Checkup</p>
+<span class="font-body-sm text-body-sm text-secondary truncate">Routine morning telemetry sweep</span>
+<span class="text-secondary font-label-sm text-label-sm">Yesterday</span>
+</div>
+<!-- Past Thread 3 -->
+<div class="p-space-sm rounded-xl hover:bg-surface-container-low flex flex-col gap-1 cursor-pointer transition-all text-on-surface-variant hover:text-on-surface">
+<p class="font-label-md text-label-md font-bold leading-tight">INC-8919 Redis cache purge</p>
+<span class="font-body-sm text-body-sm text-secondary truncate">Resolved with auto-runbook</span>
+<span class="text-secondary font-label-sm text-label-sm">Oct 24</span>
+</div>
+</div>
+</div>
+<!-- Mascot Promise Card -->
+<div class="bg-gradient-to-br from-surface-container-lowest via-surface-container-low to-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest p-1 flex-shrink-0 flex items-center justify-center">
+<img alt="Vitality Dog badge" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Plain English Guarantee</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">I translate arcane Kubernetes metrics into friendly, human-first analogies. No dev left confused!</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pets</span> Jargon Free Mode
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Active</span>
+</div>
+</div>
+</div>
+<!-- CENTER COLUMN: Active Chat Conversation (Col 4-9) -->
+<div class="xl:col-span-6 flex flex-col gap-space-md">
+<!-- Mascot Hero Greeting Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] relative">
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-space-md">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-low p-2 flex-shrink-0 relative shadow-sm">
+<img alt="Vitality Dog Detective" class="w-full h-full object-contain animate-bounce" src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0" style="animation-duration: 2.5s;"/>
+<span class="absolute -bottom-1 -right-1 px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container text-[10px] font-bold">Copilot</span>
+</div>
+<div class="flex-1 text-center sm:text-left">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm mb-1.5">
+<span>🐾 Detective Mode Enabled</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+              Woof! Hi Sarah, I'm your Vitality Incident Detective!
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              I sniffed through 48,000 system logs and found why the checkout is slowing down. Ask me anything, or let me break it down for you!
+            </p>
+</div>
+</div>
+<!-- Clickable Suggested Questions -->
+<div class="mt-space-md pt-space-sm flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Quick Sniff Prompts</span>
+<div class="flex flex-wrap gap-2 pt-1" id="promptPills">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface font-label-sm text-label-sm transition-all shadow-sm flex items-center gap-1" onclick="handlePromptClick(this)">
+<span>🐾</span> "Sniff out what happened in simple English"
+            </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface font-label-sm text-label-sm transition-all shadow-sm flex items-center gap-1" onclick="handlePromptClick(this)">
+<span>🐾</span> "Can I safely restore the connection pool to 100?"
+            </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface font-label-sm text-label-sm transition-all shadow-sm flex items-center gap-1" onclick="handlePromptClick(this)">
+<span>🐾</span> "Are customers losing money or cart items?"
+            </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface font-label-sm text-label-sm transition-all shadow-sm flex items-center gap-1" onclick="handlePromptClick(this)">
+<span>🐾</span> "Run safe sandbox simulation"
+            </button>
+</div>
+</div>
+</div>
+<!-- Conversation Stream -->
+<div class="flex flex-col gap-space-md" id="chatThread">
+<!-- User Message 1 -->
+<div class="flex items-start justify-end gap-space-sm pl-8">
+<div class="flex flex-col items-end gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Dr. Sarah Chen • 14:18 UTC</span>
+<div class="bg-primary-container text-on-primary-container px-space-md py-space-sm rounded-2xl rounded-tr-xs shadow-[0_4px_16px_-2px_rgba(237,0,86,0.2)] max-w-lg">
+<p class="font-body-md text-body-md">Can you explain why the checkout is failing in plain English without technical jargon?</p>
+</div>
+</div>
+<img class="w-9 h-9 rounded-full object-cover flex-shrink-0 mt-5" data-alt="Close up professional portrait of Dr. Sarah Chen, female Principal Site Reliability Engineer with friendly focus, clean lighting and modern tech background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXVW5_Ti8A39wrpEIVCrE3bbThTNJ_mRnMWXoaZ1BJ_6XDJLMoTOYX_RXlAg0fEJbVlzNFZ3U2UXmr5IgnSsXAMdPwzBD2ekZvv269ceiPcs7cXiDkd75UpSh7nflb9dZ09Sd7Cr4IfzZkviqGOk-FgNlMgw-7rysKIj2qzS5lDN66Zi1Wp2YDu929grP6e3QZQqK7vryrI9ZChuhtX92HZQEL_xRY_9YMEmYRmGlY6Od5tKRqdQOT"/>
+</div>
+<!-- Vitality Dog Detective Response 1 -->
+<div class="flex items-start gap-space-sm pr-6">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low p-1.5 flex-shrink-0 mt-5 shadow-sm">
+<img alt="Vitality Dog Avatar" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0"/>
+</div>
+<div class="flex flex-col items-start gap-1 flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-bold">Vitality Dog Detective</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-semibold">Plain English Mode</span>
+<span class="font-label-sm text-label-sm text-secondary">14:18 UTC</span>
+</div>
+<!-- Response Card -->
+<div class="bg-surface-container-lowest rounded-2xl rounded-tl-xs p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] w-full flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[22px]">storefront</span>
+<span>The Store Checkout Analogy</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Think of your website like a bustling grocery supermarket that normally operates with <strong>100 active checkout registers</strong>.
+              </p>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                At <strong>14:12 UTC</strong>, an automated configuration tweak accidentally shuttered <strong>90 of those registers</strong>, leaving only <strong>10 registers open</strong> to service everyone! Shoppers backed up into a giant queue in the aisles, and after waiting 30 seconds without movement, their screens gave up with a <em>Payment Gateway Timeout</em>.
+              </p>
+<!-- Quick Facts Checklist -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-1.5">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Detective Findings:</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="flex items-center gap-1.5 text-tertiary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>$0 Money Lost</span>
+</div>
+<div class="flex items-center gap-1.5 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span>342 Users Delayed</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Carts 100% Intact</span>
+</div>
+</div>
+</div>
+<!-- Evidence Diff snippet -->
+<div class="bg-surface-container-high rounded-xl p-space-sm text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span class="font-mono">config/database.yml</span>
+<span>Commit: #f89e2c (14:12 UTC)</span>
+</div>
+<div class="font-mono text-[12px] bg-surface-container-lowest rounded-lg p-2.5 flex flex-col gap-0.5">
+<span class="text-error line-through bg-error-container/40 px-1 rounded">- max_checkout_pool_connections: 100</span>
+<span class="text-primary font-bold bg-primary-fixed/60 px-1 rounded">+ max_checkout_pool_connections: 10 # Accidentally throttled!</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="text-primary hover:text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span> Helpful analogy
+                </button>
+<span class="text-secondary">•</span>
+<button class="text-secondary hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">content_copy</span> Copy explanation
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- User Message 2 -->
+<div class="flex items-start justify-end gap-space-sm pl-8">
+<div class="flex flex-col items-end gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Dr. Sarah Chen • 14:20 UTC</span>
+<div class="bg-primary-container text-on-primary-container px-space-md py-space-sm rounded-2xl rounded-tr-xs shadow-[0_4px_16px_-2px_rgba(237,0,86,0.2)] max-w-lg">
+<p class="font-body-md text-body-md">Is it safe to revert this back to 100 right now? Will customers get kicked out or double charged?</p>
+</div>
+</div>
+<img class="w-9 h-9 rounded-full object-cover flex-shrink-0 mt-5" data-alt="Sarah Chen portrait avatar smiling thoughtfully at dual workstation monitors in tech operations center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKZQ6wDQpuKIc7L9S-Er86GS0nIo1a190IHVEZjIssP8P-FxODgJr2ROjHVKKR4UKxgJ_GMmNQdsjed9HiEQdTVlqrR2CDXBSALGMbEDjZJY0MrnzRYCIFN6pI-0hZY2xuPKa140PFom8nKAZ55hIkEa--HDl0gX6osdRVtqq7Q00tp2yMPv5km7FNSon9TlanTU2EPGxWkUCnba1BmG1IVRe4aZu4u2d5MW4IEoUep2w_GVD04jPZ"/>
+</div>
+<!-- Vitality Dog Detective Response 2 -->
+<div class="flex items-start gap-space-sm pr-6">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low p-1.5 flex-shrink-0 mt-5 shadow-sm">
+<img alt="Vitality Dog Avatar" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0"/>
+</div>
+<div class="flex flex-col items-start gap-1 flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-bold">Vitality Dog Detective</span>
+<span class="px-2 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-bold">Tail Wagging: All Clear! 🐕💨</span>
+<span class="font-label-sm text-label-sm text-secondary">14:20 UTC</span>
+</div>
+<!-- Response Card -->
+<div class="bg-surface-container-lowest rounded-2xl rounded-tl-xs p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] w-full flex flex-col gap-space-sm">
+<p class="font-body-md text-body-md text-on-surface font-semibold text-tertiary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+                Yes! It is 100% safe to restore.
+              </p>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Our database drivers support dynamic <strong>hot-reload</strong>. This means no server restarts, zero session resets, and absolutely no shoppers will lose their carts. Active sessions are pinned safely inside Redis cluster memory.
+              </p>
+<!-- Verification checklist -->
+<div class="flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span><strong>Zero double charge risk:</strong> Stripe idempotency keys protect every in-flight transaction.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span><strong>Expected latency drop:</strong> P99 response drops from 8,420ms back down to 142ms in &lt; 90s.</span>
+</div>
+</div>
+<!-- Interactive Action Callout -->
+<div class="bg-surface-container-low rounded-xl p-space-md mt-1 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">rocket_launch</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Ready to apply fix to sandbox?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Executes non-destructive pool scale test</span>
+</div>
+</div>
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md shadow-[0_4px_16px_-2px_rgba(237,0,86,0.3)] transition-all flex items-center justify-center gap-2" onclick="triggerSandboxSimulation()">
+<span>Simulate &amp; Approve Fix</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Chat Input Container -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_12px_32px_-4px_rgba(237,0,86,0.12)] sticky bottom-2 z-30">
+<!-- Input controls bar -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Vitality Dog Detective Listening</span>
+</div>
+<!-- Plain English Toggle -->
+<label class="flex items-center gap-2 cursor-pointer">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Plain English Mode:</span>
+<div class="relative inline-flex items-center">
+<input checked="" class="sr-only peer" id="jargonToggle" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">ON</span>
+</label>
+</div>
+<!-- Actual Textarea input -->
+<div class="relative flex items-center">
+<textarea class="w-full bg-surface-container-low rounded-xl px-space-md py-2.5 pr-28 text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md focus:outline-none focus:bg-surface-container resize-none" id="userChatInput" placeholder="Ask Vitality Dog Detective about this incident, blast radius, rollback steps..." rows="2"></textarea>
+<div class="absolute right-2.5 flex items-center gap-1.5">
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Attach runbook or log snippet">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Voice prompt with AI">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary-container hover:bg-primary text-on-primary-container flex items-center justify-center shadow-md transition-all" onclick="sendChatMessage()">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-[11px] text-secondary font-label-sm">
+<span>Powered by Vitality SRE LLM v4.2 • Autonomous Safety Guard rails active</span>
+<span>Press Enter to send, Shift+Enter for new line</span>
+</div>
+</div>
+</div>
+<!-- RIGHT SIDEBAR: Live Incident Snapshot & Guard Status (Col 10-12) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Incident Status Overview Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Incident Snapshot</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">Sev-2 Degradation</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">INC-8492</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Checkout Pool Bottleneck</span>
+</div>
+<!-- Latency Inline Sparkline Chart -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-secondary">P99 Latency (Last 60m)</span>
+<span class="text-primary font-bold">8,420ms (Spike)</span>
+</div>
+<!-- High visual sparkline svg -->
+<svg class="w-full h-14 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 200 50">
+<path d="M 0 42 Q 25 40 50 41 T 100 39 T 130 38 L 140 10 L 145 8 L 155 12 L 170 9 L 185 11 L 200 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M 0 42 Q 25 40 50 41 T 100 39 T 130 38 L 140 10 L 145 8 L 155 12 L 170 9 L 185 11 L 200 10 L 200 50 L 0 50 Z" fill="currentColor" fill-opacity="0.08"></path>
+<circle class="fill-primary" cx="140" cy="10" r="3.5"></circle>
+<circle class="fill-primary animate-ping" cx="200" cy="10" r="3.5"></circle>
+</svg>
+<div class="flex justify-between text-[10px] text-secondary font-mono">
+<span>13:30 UTC</span>
+<span class="text-primary font-bold">14:12 (Deploy)</span>
+<span>Now</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 pt-1 text-label-sm font-label-sm">
+<div class="flex justify-between py-1 bg-surface-container/40 px-2 rounded-lg">
+<span class="text-secondary">Affected Scope:</span>
+<span class="font-bold text-on-surface">api.vitality.health/checkout</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container/40 px-2 rounded-lg">
+<span class="text-secondary">Error Rate:</span>
+<span class="font-bold text-primary">14.8% Timeouts</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container/40 px-2 rounded-lg">
+<span class="text-secondary">Est. Customer Impact:</span>
+<span class="font-bold text-on-surface">342 active carts</span>
+</div>
+</div>
+</div>
+<!-- Mascot Guard Safety Guarantee Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">security</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Guard Dog Safety Lock</span>
+<span class="font-body-sm text-body-sm text-tertiary font-bold">Zero Unapproved Production Writes</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Vitality AI Copilot is operating under <strong>Enforced Simulation Protocol</strong>. Every remediation proposal is tested in sandbox environments first and requires two-factor signoff before applying to production.
+        </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface">Dog Detective Audit Trail</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Verified Hash #88b1</span>
+</div>
+</div>
+<!-- Quick Action Shortcuts -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">One-Click SRE Shortcuts</span>
+<button class="w-full text-left p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between group" onclick="draftSlackUpdate()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">forum</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold group-hover:text-primary transition-colors">Draft Slack update for Support</span>
+<span class="font-body-sm text-body-sm text-secondary text-[12px]">Generates empathetic customer message</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">chevron_right</span>
+</button>
+<button class="w-full text-left p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between group" onclick="triggerSandboxSimulation()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold group-hover:text-primary transition-colors">Test config patch in Sandbox</span>
+<span class="font-body-sm text-body-sm text-secondary text-[12px]">Forks live traffic shadow (100 rps)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">chevron_right</span>
+</button>
+<button class="w-full text-left p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">article</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold group-hover:text-primary transition-colors">Generate RCA Postmortem Draft</span>
+<span class="font-body-sm text-body-sm text-secondary text-[12px]">Exports markdown for Notion / Confluence</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function handlePromptClick(btn) {
+    const text = btn.innerText.replace('🐾 ', '').replace(/"/g, '');
+    const input = document.getElementById('userChatInput');
+    input.value = text;
+    input.focus();
+  }
+
+  function triggerSandboxSimulation() {
+    const chatThread = document.getElementById('chatThread');
+    
+    // Add user message
+    const userMsg = document.createElement('div');
+    userMsg.className = "flex items-start justify-end gap-space-sm pl-8";
+    userMsg.innerHTML = `
+      <div class="flex flex-col items-end gap-1">
+        <span class="font-label-sm text-label-sm text-secondary">Dr. Sarah Chen • Just now</span>
+        <div class="bg-primary-container text-on-primary-container px-space-md py-space-sm rounded-2xl rounded-tr-xs shadow-[0_4px_16px_-2px_rgba(237,0,86,0.2)] max-w-lg">
+          <p class="font-body-md text-body-md">Simulating safe configuration rollback on staging shadow environment.</p>
+        </div>
+      </div>
+      <div class="w-9 h-9 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center text-xs flex-shrink-0 mt-5">SC</div>
+    `;
+    chatThread.appendChild(userMsg);
+
+    // Mascot reply with loading then complete
+    setTimeout(() => {
+      const dogMsg = document.createElement('div');
+      dogMsg.className = "flex items-start gap-space-sm pr-6 animate-fade-in";
+      dogMsg.innerHTML = `
+        <div class="w-10 h-10 rounded-xl bg-surface-container-low p-1.5 flex-shrink-0 mt-5 shadow-sm">
+          <img src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0" alt="Vitality Dog Avatar" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col items-start gap-1 flex-1 min-w-0">
+          <div class="flex items-center gap-2">
+            <span class="font-label-sm text-label-sm text-primary font-bold">Vitality Dog Detective</span>
+            <span class="px-2 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-bold">Sandbox Test Passed ✅</span>
+            <span class="font-label-sm text-label-sm text-secondary">Just now</span>
+          </div>
+          <div class="bg-surface-container-lowest rounded-2xl rounded-tl-xs p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] w-full flex flex-col gap-space-sm">
+            <p class="font-body-md text-body-md text-on-surface">
+              <strong>Woof woof!</strong> Sandbox execution finished with <strong>0 errors</strong> under 250 simulated transactions! P99 latency instantly recovered from 8,420ms to 94ms. You can safely deploy this to production whenever you are ready.
+            </p>
+            <div class="flex items-center gap-space-sm pt-2">
+              <button class="px-4 py-2 rounded-full bg-tertiary text-on-tertiary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:opacity-90 transition-all">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+                Approve Production Rollout
+              </button>
+              <button class="px-3 py-2 rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all">
+                View Sandbox Telemetry
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      chatThread.appendChild(dogMsg);
+      dogMsg.scrollIntoView({ behavior: 'smooth' });
+    }, 600);
+  }
+
+  function draftSlackUpdate() {
+    const input = document.getElementById('userChatInput');
+    input.value = "Vitality Detective, please generate an empathetic status update for customer support Slack channel #customer-care-announcements.";
+    sendChatMessage();
+  }
+
+  function sendChatMessage() {
+    const input = document.getElementById('userChatInput');
+    const text = input.value.trim();
+    if (!text) return;
+
+    const chatThread = document.getElementById('chatThread');
+    const userMsg = document.createElement('div');
+    userMsg.className = "flex items-start justify-end gap-space-sm pl-8";
+    userMsg.innerHTML = `
+      <div class="flex flex-col items-end gap-1">
+        <span class="font-label-sm text-label-sm text-secondary">Dr. Sarah Chen • Just now</span>
+        <div class="bg-primary-container text-on-primary-container px-space-md py-space-sm rounded-2xl rounded-tr-xs shadow-[0_4px_16px_-2px_rgba(237,0,86,0.2)] max-w-lg">
+          <p class="font-body-md text-body-md">${text}</p>
+        </div>
+      </div>
+      <div class="w-9 h-9 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center text-xs flex-shrink-0 mt-5">SC</div>
+    `;
+    chatThread.appendChild(userMsg);
+    input.value = "";
+
+    setTimeout(() => {
+      const dogReply = document.createElement('div');
+      dogReply.className = "flex items-start gap-space-sm pr-6";
+      dogReply.innerHTML = `
+        <div class="w-10 h-10 rounded-xl bg-surface-container-low p-1.5 flex-shrink-0 mt-5 shadow-sm">
+          <img src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0" alt="Vitality Dog Avatar" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col items-start gap-1 flex-1 min-w-0">
+          <div class="flex items-center gap-2">
+            <span class="font-label-sm text-label-sm text-primary font-bold">Vitality Dog Detective</span>
+            <span class="font-label-sm text-label-sm text-secondary">Just now</span>
+          </div>
+          <div class="bg-surface-container-lowest rounded-2xl rounded-tl-xs p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)] w-full flex flex-col gap-2">
+            <p class="font-body-md text-body-md text-on-surface">
+              🐾 Sniffed it! Here is a ready-to-share message for the support team:
+            </p>
+            <div class="bg-surface-container-low p-3 rounded-xl font-body-sm text-body-sm text-on-surface select-all">
+              "📢 <strong>Checkout Latency Update (14:24 UTC)</strong>: Engineering identified a throttled checkout queue. Fix is currently staged in sandbox testing. No member payments were lost and carts remain safely intact. Expected resolution in under 10 minutes."
+            </div>
+          </div>
+        </div>
+      `;
+      chatThread.appendChild(dogReply);
+      dogReply.scrollIntoView({ behavior: 'smooth' });
+    }, 700);
+  }
+
+  // Allow enter to send
+  document.getElementById('userChatInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendChatMessage();
+    }
+  });
+</script></main></div><div class="fixed bottom-6 right-6 z-50"><button class="flex items-center gap-space-sm px- space-lg py-3 px-5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-[0_12px_32px_-4px_rgba(237,0,86,0.35)] hover:bg-primary transition-all duration-200 transform hover:-translate-y-0.5"><span class="material-symbols-outlined text-[22px]">support_agent</span><span>Vitality AI Assistant</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-on-primary"></span></span></button></div></body></html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","surface":"#fff8f8","on-secondary-container":"#696365","secondary-fixed-dim":"#cdc4c7","secondary-container":"#e9e0e3","background":"#fff8f8","on-surface":"#1f1a1c","on-error-container":"#93000a","tertiary-fixed":"#78fbb6","outline":"#916e71","on-primary-container":"#fffbff","surface-variant":"#eae0e2","on-primary":"#ffffff","on-secondary":"#ffffff","surface-container-low":"#fbf1f3","on-background":"#1f1a1c","surface-bright":"#fff8f8","inverse-surface":"#342f31","surface-container-highest":"#eae0e2","surface-tint":"#bd0043","on-error":"#ffffff","primary-fixed-dim":"#ffb2ba","inverse-primary":"#ffb2ba","primary":"#b90041","primary-container":"#e70054","error-container":"#ffdad6","on-tertiary-fixed":"#002111","surface-container-lowest":"#ffffff","secondary-fixed":"#e9e0e3","tertiary-fixed-dim":"#59de9b","surface-container":"#f5ebed","primary-fixed":"#ffd9dc","on-tertiary-fixed-variant":"#005232","outline-variant":"#e6bcc0","on-surface-variant":"#5d3f42","on-tertiary-container":"#f6fff5","on-secondary-fixed":"#1f1a1c","error":"#ba1a1a","secondary":"#635d5f","inverse-on-surface":"#f8eef0","on-primary-fixed":"#400011","tertiary":"#006a42","on-secondary-fixed-variant":"#4b4548","tertiary-container":"#008654","surface-dim":"#e1d8da","surface-container-high":"#efe6e8","on-primary-fixed-variant":"#910031"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1.25rem","space-lg":"1.5rem","gutter":"1.5rem","margin":"3rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["28px",{"lineHeight":"36px","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"18px","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","fontWeight":"700"}],"display-mobile":["36px",{"lineHeight":"44px","fontWeight":"800"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-lg":["16px",{"lineHeight":"20px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display":["56px",{"lineHeight":"64px","fontWeight":"800"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-md py-space-md"><div class="flex items-center gap-space-sm px-space-xs pb-space-lg"><img alt="Brand logo. - Primary color: #ed0056
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xwf3VxhVFEBkSd_xZQym18GZmiiV4vRaGWTge3gT6NMykqjMbUkoq9gENHiqBCcXLspKRJ_qYZ9HxWd104aJBEkJolXeWZKUMFqczCwPIofD8Xw8P6yDHyJjBuAGEyDK3adOhyhQDUOH8L-3klSbCs4OHN6GBJHyyt4SxSYlz4az8eLTYz1cN_DyB5fskoiGbscvsvfe4jxan3Bnr69Dq8GVE61BB5sOYfh4MbcmsldUzdkey01MHfyE8"/><div class="flex flex-col"><span class="font-label-lg text-label-lg text-primary tracking-tight">Vitality AI</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Incident Commander</span></div></div><div class="pb-space-xs"><span class="px-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary">Command Center</span></div><nav class="flex flex-col gap-1 pb-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl shadow-[0_4px_20px_-2px_rgba(237,0,86,0.12)]"><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="active-incidents" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-md text-label-md">Active Incidents</span></div><span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">3 Critical</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-investigation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-label-md text-label-md">AI Investigation</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="evidence-logs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">Evidence &amp; Logs</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="fix-recommendations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">auto_fix_high</span><span class="font-label-md text-label-md">Fix Recommendations</span></div><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">5 Pending</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 transition-all bg-primary-container text-on-primary-container font-bold rounded-xl shadow-[0_4px_20px_-2px_rgba(237,0,86,0.12)]" data-path="incident-reports" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Incident Reports</span></div></a></nav><div class="pb-space-xs"><span class="px-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary">Assistance</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl shadow-[0_4px_20px_-2px_rgba(237,0,86,0.12)]"><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-chatbot" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-label-md text-label-md">AI Chatbot</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="safe-simulation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">science</span><span class="font-label-md text-label-md">Safe Simulation</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-md text-label-md">Settings</span></div></a></nav></div><div class="p-space-md"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(237,0,86,0.06)]"><img alt="Vitality Dog mascot badge" class="w-10 h-10 rounded-lg object-contain bg-surface-container-low p-1" src="https://lh3.googleusercontent.com/aida/AEtjO1WtSAFGn0yappnsl-BKfD_Jpr2UY7gNItygUaRx7MYQlF60nF-eLTfN63zPQli4WJLBqstTofeejZt38EIVoqeT3ziNINdojQl4PDKMa605W_YjN15Jx49ylRGA7jn8Knb0QM32W3JXgC-VrZzKqfVNgUkOaJZ0hIxWqosYi7fWAD0Ms0TVhUH8gv-Tdbg06yAIEgLQTMtfSdsyae8Q6gJB612n2Lyua2OX8YCJ_3Nzp1x20d0o4Jb6kn0"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-bold">Vitality Guard</span><span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Active</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-10 pr-space-md py-2 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm focus:outline-none shadow-[0_2px_6px_-1px_rgba(26,22,24,0.04)]" placeholder="Search incidents, runbooks, logs, or services..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-sm"><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-tertiary"></span>Vitality Core Systems Monitored</span><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>Live Safe Simulation Mode</span></div><div class="flex items-center gap-space-sm pl-space-sm"><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="flex items-center gap-2 pl-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XYBFtSpP-yrBd7VVSILKUgzfbq9YuvJyfi9BrsGz0bQZF2Xxi1q0ojdzCodqAlj0wspxJT73tx4un2R57MqA3p-aoAEg2U04BnXY-knoFb3TX2RY_aj86lNMR6VTaHtcACttPKvH9pjC0dmjGhedslXVgg6JOHcxPV0OaCO29kqZI7qlYXxDybUeUkMeUsQFhiCBK0D8PPUDJc4lpuCGcgCUQiatKYAKovQmwB5Y9uwxdIXUaaWqqmaQ"/><div class="hidden md:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface leading-tight">Dr. Sarah Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant text-[11px] leading-tight">Principal SRE</span></div></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg"><div class="flex flex-col w-full pb-space-xl">
+<!-- Breadcrumb & Top Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pt-space-md pb-space-lg">
+<div class="flex flex-col gap-1">
+<nav class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:text-primary transition-colors" href="#">Dashboard</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Incident Reports</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">INC-8492 Final Report</span>
+</nav>
+<div class="flex flex-wrap items-center gap-space-sm mt-1">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          Incident Report: INC-8492 — Online Checkout Slowdown
+        </h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          RESOLVED (Successfully Recovered)
+        </span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">timeline</span>
+        Visual Timeline
+      </button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">share</span>
+        Send to Slack / Email
+      </button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_8px_24px_-4px_rgba(237,0,86,0.3)] hover:bg-primary transition-all duration-200">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Download PDF Report
+      </button>
+</div>
+</div>
+<!-- Key Metrics Row (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Total Duration -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.05)] border-l-4 border-l-primary-container flex flex-col justify-between">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Total Duration</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+</div>
+<div>
+<div class="font-display-mobile text-display-mobile text-on-surface tracking-tight">12 <span class="font-headline-sm text-headline-sm font-semibold text-secondary">min</span></div>
+<p class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+          84% faster than monthly SLA (75m)
+        </p>
+</div>
+</div>
+<!-- Time to Detect (TTD) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.05)] border-l-4 border-l-primary flex flex-col justify-between">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Time to Detect (TTD)</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">radar</span>
+</div>
+</div>
+<div>
+<div class="font-display-mobile text-display-mobile text-on-surface tracking-tight">2 <span class="font-headline-sm text-headline-sm font-semibold text-secondary">min</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+          AI Kernel telemetry anomaly trigger
+        </p>
+</div>
+</div>
+<!-- Time to Resolve (TTR) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.05)] border-l-4 border-l-tertiary flex flex-col justify-between">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Time to Resolve (TTR)</span>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">auto_mode</span>
+</div>
+</div>
+<div>
+<div class="font-display-mobile text-display-mobile text-on-surface tracking-tight">10 <span class="font-headline-sm text-headline-sm font-semibold text-secondary">min</span></div>
+<p class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          Safe pool scale rebalance applied
+        </p>
+</div>
+</div>
+<!-- Financial / Data Loss -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(237,0,86,0.05)] border-l-4 border-l-tertiary-container flex flex-col justify-between">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Financial &amp; Data Loss</span>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">savings</span>
+</div>
+</div>
+<div>
+<div class="font-display-mobile text-display-mobile text-tertiary tracking-tight">$0</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+          Zero customer orders lost
+        </p>
+</div>
+</div>
+</div>
+<!-- Executive Briefing Card & Recovery Curve Split Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- Executive Briefing Card -->
+<div class="lg:col-span-7 flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-[0_4px_24px_-2px_rgba(237,0,86,0.06)] relative overflow-hidden">
+<!-- Ambient decorative glow -->
+<div class="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<!-- Dog Mascot Seal Badge -->
+<div class="flex items-center justify-between flex-wrap gap-space-sm pb-space-sm border-b border-surface-variant">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-contain p-1 bg-surface-container-low shadow-sm" data-alt="Vitality lively dachshund dog mascot running forward happily with red collar and shiny silver tag in playful vector style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh2n1bBaztKrmnA9tYoCsGWqApW_c1StMKtA0kWwOErD8XGfQYHeZx_koWwxsG47Hatja5rR4fibFR2-y6dOUwE1I-ZFz2E4lhxVjt_b_v_4ijsJ7T7oTM8vl40UAya4XoV3YqN6CVBhyFzlIGEP-pscyc9GnGpn5qZfEbM8w8LYqg7nWP7AaKKVOlU6vM6lWeRnmn5nrX5RF8wamhE_Z05W4NLW_PW1e24ldHS7JtxEaj0iQeMoAc"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-[12px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">Audited &amp; Verified by Vitality AI Detective</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Cert #VTL-994</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Autonomous verification pass executed at 14:32 UTC</span>
+</div>
+</div>
+<span class="text-secondary font-label-sm text-label-sm">Ref: POST-INC-8492</span>
+</div>
+<!-- Summary text -->
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Executive Briefing</h2>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            On October 24, at <strong class="text-on-surface font-semibold">14:15 UTC</strong>, the online checkout service encountered severe latency and payment timeouts caused by an unintended database connection pool reduction. The <strong class="text-primary font-semibold">Autonomous AI Commander</strong> detected the anomaly in 2 minutes, pinpointed root cause in 3 minutes, and prepared a safe fix reviewed and approved by human operator <strong class="text-on-surface font-semibold">Sarah Jenkins</strong>. Full recovery was achieved at <strong class="text-tertiary font-semibold">14:27 UTC</strong> with zero data loss.
+          </p>
+</div>
+<!-- Sign-off Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Incident Lead</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sarah Jenkins</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px]">smart_toy</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">AI Commander</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Triage Model v4.2</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-3 rounded-lg bg-tertiary-fixed/30">
+<span class="material-symbols-outlined text-tertiary text-[20px]">security</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Impact Assessment</span>
+<span class="font-label-md text-label-md text-on-tertiary-fixed font-bold">$0 Financial Harm</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Latency Recovery Curve -->
+<div class="lg:col-span-5 flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-[0_4px_24px_-2px_rgba(237,0,86,0.06)]">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Service Performance Telemetry</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Checkout Latency Recovery Curve</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">p99 Latency</span>
+</div>
+<!-- SVG Graph -->
+<div class="w-full my-auto py-2">
+<div class="relative w-full h-44">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 460 170" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="latencyGlow" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#e70054" stop-opacity="0.32"></stop>
+<stop offset="65%" stop-color="#ffd9dc" stop-opacity="0.12"></stop>
+<stop offset="100%" stop-color="#fff8f8" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#eae0e2" stroke-dasharray="3 3" x1="0" x2="460" y1="20" y2="20"></line>
+<line stroke="#eae0e2" stroke-dasharray="3 3" x1="0" x2="460" y1="75" y2="75"></line>
+<line stroke="#eae0e2" stroke-dasharray="3 3" x1="0" x2="460" y1="135" y2="135"></line>
+<!-- Grid text labels -->
+<text fill="#696365" font-family="Plus Jakarta Sans" font-size="10" x="5" y="16">2,500ms Peak</text>
+<text fill="#696365" font-family="Plus Jakarta Sans" font-size="10" x="5" y="71">1,200ms Threshold</text>
+<text fill="#696365" font-family="Plus Jakarta Sans" font-size="10" x="5" y="131">160ms Normal</text>
+<!-- Shaded Area -->
+<path d="M 20 135 L 70 135 L 120 135 L 160 22 L 210 28 L 270 45 L 340 134 L 440 136 L 440 160 L 20 160 Z" fill="url(#latencyGlow)"></path>
+<!-- Latency Line -->
+<path d="M 20 135 C 60 135 110 135 130 130 C 145 125 155 25 165 24 C 185 22 220 30 250 48 C 290 70 320 133 360 135 C 390 136 420 135 440 135" stroke="#e70054" stroke-linecap="round" stroke-width="3"></path>
+<!-- Normal SLA threshold horizontal reference -->
+<line stroke="#008654" stroke-dasharray="4 2" stroke-width="1.5" x1="20" x2="440" y1="135" y2="135"></line>
+<!-- Key points markers -->
+<!-- Baseline -->
+<circle cx="20" cy="135" fill="#008654" r="4"></circle>
+<!-- Spike / Peak -->
+<circle cx="165" cy="24" fill="#e70054" r="6"></circle>
+<circle class="animate-ping" cx="165" cy="24" r="11" stroke="#e70054" stroke-opacity="0.4" stroke-width="1.5" style="transform-origin: 165px 24px;"></circle>
+<!-- Human Authorization Point -->
+<circle cx="270" cy="58" fill="#1f1a1c" r="4.5"></circle>
+<!-- Full Recovery Point -->
+<circle cx="360" cy="135" fill="#008654" r="5"></circle>
+</svg>
+</div>
+</div>
+<!-- Timeline markers underneath graph -->
+<div class="grid grid-cols-4 pt-space-xs text-center border-t border-surface-variant font-label-sm text-label-sm">
+<div class="flex flex-col items-center">
+<span class="text-on-surface-variant">14:10 UTC</span>
+<span class="font-bold text-tertiary">160ms</span>
+<span class="text-[11px] text-secondary">Normal Base</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-on-surface-variant">14:17 UTC</span>
+<span class="font-bold text-primary">2,450ms</span>
+<span class="text-[11px] text-error font-medium">Anomaly Peak</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-on-surface-variant">14:22 UTC</span>
+<span class="font-bold text-on-surface">620ms</span>
+<span class="text-[11px] text-secondary">Safe Fix Apply</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-on-surface-variant">14:27 UTC</span>
+<span class="font-bold text-tertiary">155ms</span>
+<span class="text-[11px] text-tertiary font-semibold">Fully Restored</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabbed Post-Mortem Audit Sections -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest p-space-lg shadow-[0_4px_24px_-2px_rgba(237,0,86,0.06)] mb-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md border-b border-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Deep Technical Post-Mortem</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Autonomous Investigation &amp; Audit Trail</h2>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+        Immutable Audit Hash: <code class="text-primary font-mono text-[11px]">sha256:7f01a..9c</code>
+</div>
+</div>
+<!-- Tab navigation -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-md pb-space-md" id="auditTabs">
+<button class="tab-button inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md transition-all shadow-[0_4px_12px_-2px_rgba(237,0,86,0.25)]" id="tabBtn-root-cause" onclick="switchTab('root-cause')">
+<span class="material-symbols-outlined text-[18px]">bug_report</span>
+        1. Root Cause Diff
+      </button>
+<button class="tab-button inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="tabBtn-why-ai" onclick="switchTab('why-ai')">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+        2. Why AI Caught It
+      </button>
+<button class="tab-button inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="tabBtn-sandbox" onclick="switchTab('sandbox')">
+<span class="material-symbols-outlined text-[18px]">science</span>
+        3. Sandbox Validation
+      </button>
+<button class="tab-button inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="tabBtn-human-gate" onclick="switchTab('human-gate')">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+        4. Human Control Kept
+      </button>
+</div>
+<!-- Tab 1: Root Cause Summary -->
+<div class="tab-pane flex flex-col gap-space-md pt-2" id="tabContent-root-cause">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">commit</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">Identified Culprit Commit: <span class="font-mono text-primary font-bold">#d4a9f20</span></div>
+<div class="font-body-sm text-body-sm text-secondary">Pushed by Release Bot v2.1 • Service: <code class="bg-surface-container px-1 py-0.5 rounded text-on-surface">checkout-payment-gateway</code></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">High Latency Contributor</span>
+</div>
+</div>
+<!-- Diff code viewer -->
+<div class="rounded-xl overflow-hidden bg-inverse-surface text-on-primary font-mono text-body-sm shadow-inner">
+<div class="flex items-center justify-between px-4 py-2.5 bg-surface-dim/40 border-b border-surface-variant/20 text-inverse-on-surface font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="ml-2 font-mono text-surface-variant">helm/checkout-service/values.production.yaml</span>
+</div>
+<span class="text-secondary-fixed font-mono text-[11px]">Git Diff • unified</span>
+</div>
+<div class="p-4 overflow-x-auto space-y-1 text-[13px] leading-relaxed">
+<div class="text-surface-variant opacity-70">@@ -84,7 +84,7 @@ database:</div>
+<div class="text-surface-variant opacity-70">  host: "aurora-pg-primary.vitality.internal"</div>
+<div class="text-surface-variant opacity-70">  port: 5432</div>
+<div class="bg-error-container/20 text-error-container px-2 py-0.5 rounded flex items-center">
+<span class="w-6 select-none opacity-60 text-error">-</span>
+<span>  max_connections_pool: 250   # Baseline capacity for peak sales</span>
+</div>
+<div class="bg-tertiary-container/20 text-tertiary-fixed px-2 py-0.5 rounded flex items-center">
+<span class="w-6 select-none opacity-60 text-tertiary">+</span>
+<span>  max_connections_pool: 25    # Erroneous typo in micro-service refactor</span>
+</div>
+<div class="text-surface-variant opacity-70">  idle_timeout_ms: 10000</div>
+<div class="text-surface-variant opacity-70">  ssl_mode: "verify-full"</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Impact Chain Analysis</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Dropping pool capacity from 250 down to 25 caused 90% of checkout threads to block on pooled DB socket allocation. As pending queues filled up, gateway ingress buffers backed up to 2.4s per transaction before triggering circuit breakers.
+          </p>
+</div>
+</div>
+</div>
+<!-- Tab 2: Why AI Caught It -->
+<div class="tab-pane hidden flex flex-col gap-space-md pt-2" id="tabContent-why-ai">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center gap-2 pb-2">
+<span class="material-symbols-outlined text-primary">ssid_chart</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Multi-Metric Correlation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Vitality AI correlates HTTP 504 surges with underlying socket lock waits rather than treating it merely as generic edge server failure.
+          </p>
+<div class="mt-4 pt-3 border-t border-surface-variant flex items-center justify-between text-label-sm font-label-sm text-primary">
+<span>Confidence Index</span>
+<span class="font-bold">99.4%</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center gap-2 pb-2">
+<span class="material-symbols-outlined text-tertiary">speed</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Proactive Ingress Sniffing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Detected a subtle p99 divergence of +140ms at 14:16 UTC before user-facing error rate tripped legacy CloudWatch alert rules.
+          </p>
+<div class="mt-4 pt-3 border-t border-surface-variant flex items-center justify-between text-label-sm font-label-sm text-tertiary">
+<span>Alert Lead Time</span>
+<span class="font-bold">+6.5 minutes</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center gap-2 pb-2">
+<span class="material-symbols-outlined text-on-surface">alt_route</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Git Blame Cross-Match</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cross-referenced timestamp 14:15:02 deployment event with config repository changes, zeroing in on the YAML pool edit within 45 seconds.
+          </p>
+<div class="mt-4 pt-3 border-t border-surface-variant flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+<span>Auto-Attribution</span>
+<span class="font-bold">Instant</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 3: Sandbox Validation -->
+<div class="tab-pane hidden flex flex-col gap-space-md pt-2" id="tabContent-sandbox">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">flaky</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">Pre-Execution Safe Simulation Run</div>
+<p class="font-body-sm text-body-sm text-secondary">Synthetic clone replica instantiated on ephemeral Kubernetes cluster <code class="font-mono text-on-surface">ns-sandbox-inc8492</code></p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          All 10,000 Synthetic Tests Passed
+        </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="p-4 rounded-xl bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Simulated Load</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">10,000 req/s</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-1">100% successful payments</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Memory Footprint</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">+18.4 MB</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Within safe pod boundaries</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Regression Risk</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">0.00%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">No downstream lock contention</span>
+</div>
+</div>
+</div>
+<!-- Tab 4: Human Control Kept -->
+<div class="tab-pane hidden flex flex-col gap-space-md pt-2" id="tabContent-human-gate">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Guaranteed Human-In-The-Loop Governance</h4>
+<p class="font-body-sm text-body-sm text-secondary">Per Vitality Safety Directive §4, autonomous remediation in production finance tier requires explicit human authorization.</p>
+</div>
+</div>
+<div class="mt-2 space-y-2">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Step 1: Anomaly Triaged by AI Commander</span>
+</div>
+<span class="font-mono font-label-sm text-label-sm text-secondary">14:17:10 UTC • Auto</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Step 2: Dry Run Validated in Sandboxed Namespace</span>
+</div>
+<span class="font-mono font-label-sm text-label-sm text-secondary">14:19:40 UTC • Auto</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest border-l-4 border-l-primary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">fingerprint</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Step 3: Cryptographic Approval Granted by Sarah Jenkins (Principal SRE)</span>
+</div>
+<span class="font-mono font-label-sm text-label-sm text-primary font-bold">14:21:05 UTC • Signed</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Step 4: Canary Rollout &amp; Hot-Reload Verified</span>
+</div>
+<span class="font-mono font-label-sm text-label-sm text-secondary">14:23:18 UTC • Auto</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Chronological Timeline Section -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-[0_4px_24px_-2px_rgba(237,0,86,0.06)] mb-space-lg">
+<div class="flex items-center justify-between pb-space-md border-b border-surface-variant">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Step-By-Step Chronology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Incident Event Log</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">4 Events Logged • 12 Minute Window</span>
+</div>
+<div class="relative pl-6 sm:pl-8 space-y-6 pt-space-md before:absolute before:left-2 sm:before:left-3 before:top-4 before:bottom-4 before:w-0.5 before:bg-surface-variant">
+<!-- Item 1 -->
+<div class="relative flex items-start gap-4">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-error flex items-center justify-center text-on-error shadow-sm ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[12px]">warning</span>
+</div>
+<div class="flex flex-col flex-1 p-3.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">14:15 UTC — Micro-Service Deployment &amp; Anomaly Onset</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Spike Initiated</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Deployment commit <code>#d4a9f20</code> goes live. Connection pool throttled to 25. Checkout latency immediately rises from normal 160ms up to 850ms.
+          </p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative flex items-start gap-4">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[12px]">psychology</span>
+</div>
+<div class="flex flex-col flex-1 p-3.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">14:17 UTC — Vitality AI Detective Triggers Alert</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Autonomous Detection</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Autonomous Incident Commander identifies abnormal connection pool starvation. Latency peaks at 2,450ms. AI triggers incident INC-8492 and pages Sarah Jenkins.
+          </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative flex items-start gap-4">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[12px]">how_to_reg</span>
+</div>
+<div class="flex flex-col flex-1 p-3.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">14:21 UTC — Human Gate Verified &amp; Remediation Dispatched</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Human SRE Gate</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Sarah Jenkins reviews automated sandbox simulation results and taps 1-Click Approve. Hot-reload config adjustment initiates across 16 micro-service pods.
+          </p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="relative flex items-start gap-4">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shadow-sm ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<div class="flex flex-col flex-1 p-3.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">14:27 UTC — Complete Recovery Confirmed</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Fully Restored</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Latency drops back to baseline 155ms. Zero payment transactions dropped. AI Detective completes root cause documentation pass and closes INC-8492.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Banner (Vitality Dog Mascot Assistant) -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-primary-container to-primary-container p-space-lg text-on-primary shadow-[0_12px_36px_-4px_rgba(237,0,86,0.35)] flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md z-10">
+<div class="w-16 h-16 rounded-full bg-surface p-1 shadow-md flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Vitality enthusiastic puppy mascot wearing red collar with shiny V silver medallion running with energetic paws forward isolated on clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbQjRwsm6KBcTbv6BTY00N9y1TqDRfrotLc--OA_z6uJFqqFkUKyl5lxFUNPweso6lFLmyN5k0yHvrkzKAccIyX6rcvBQL_7_O0rbclB9vFUsgEXU7rB2ZxXbMTQb8u0d_pbmyGFMf0o1jbeHmuHApNKFZNkRqfqjZlbkSy8FZJUdc6-et_Wc5N9s82Cl2fvIH59e4LI__L_ljkHQHFoE9rqZIXGoNFi14L02WRDMm0y3KVfDeBvcB"/>
+</div>
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm w-fit mb-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+          Vitality Incident Assistant
+        </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-primary">
+          Need this post-mortem ready for engineering review?
+        </h3>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-0.5">
+          Vitality AI has pre-rendered executive summaries and presentation slides with zero extra effort.
+        </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm z-10 w-full md:w-auto justify-end">
+<button class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-surface text-primary font-label-md text-label-md hover:bg-surface-container-low transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">slideshow</span>
+        Export Post-Mortem Slides
+      </button>
+<button class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-on-primary text-primary-container font-label-md text-label-md hover:bg-on-primary/90 transition-all shadow-md font-bold">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+        Generate Executive 2-Minute Brief
+      </button>
+</div>
+</div>
+</div>
+<!-- Inline JavaScript for Tabs Switcher -->
+<script>
+  function switchTab(tabId) {
+    // Hide all tab panes
+    document.querySelectorAll('.tab-pane').forEach(el => el.classList.add('hidden'));
+    
+    // Reset all buttons to inactive state
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.className = "tab-button inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all";
+    });
+
+    // Show active pane
+    const activePane = document.getElementById('tabContent-' + tabId);
+    if (activePane) {
+      activePane.classList.remove('hidden');
+    }
+
+    // Set active button style
+    const activeBtn = document.getElementById('tabBtn-' + tabId);
+    if (activeBtn) {
+      activeBtn.className = "tab-button inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md transition-all shadow-[0_4px_12px_-2px_rgba(237,0,86,0.25)] font-bold";
+    }
+  }
+</script></main></div><div class="fixed bottom-6 right-6 z-50"><button class="flex items-center gap-space-sm px- space-lg py-3 px-5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-[0_12px_32px_-4px_rgba(237,0,86,0.35)] hover:bg-primary transition-all duration-200 transform hover:-translate-y-0.5"><span class="material-symbols-outlined text-[22px]">support_agent</span><span>Vitality AI Assistant</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-on-primary"></span></span></button></div></body></html>
